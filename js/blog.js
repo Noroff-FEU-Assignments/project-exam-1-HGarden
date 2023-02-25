@@ -48,12 +48,10 @@ async function getPosts(url) {
 
   mainImage.onclick = function () {
     PopoutContainer.style.display = "block";
-    bigImage.src = this.src;
   };
 
   PopoutContainer.onclick = function () {
     PopoutContainer.style.display = "none";
-    bigImage.src = this.src;
   };
 }
 
