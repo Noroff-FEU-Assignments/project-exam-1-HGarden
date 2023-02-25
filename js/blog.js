@@ -44,7 +44,6 @@ async function getPosts(url) {
 </div>`;
 
   const mainImage = document.querySelector(".main-image");
-  const bigImage = document.querySelector(".big-image");
 
   mainImage.onclick = function () {
     PopoutContainer.style.display = "block";
