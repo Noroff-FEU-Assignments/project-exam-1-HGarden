@@ -13,6 +13,8 @@ async function getPosts(url) {
   const post = await response.json();
   console.log(post);
 
+  document.title = `${post.title.rendered} - The Underground`;
+
   containerBlog.innerHTML += `<div class="container-title">
   <div>
     <h1>${post.title.rendered}</h1>
@@ -46,7 +48,7 @@ async function getPosts(url) {
   const mainImage = document.querySelector(".main-image");
 
   mainImage.onclick = function () {
-    PopoutContainer.style.display = "block";
+    PopoutContainer.style.display = "inline-block";
   };
 
   PopoutContainer.onclick = function () {

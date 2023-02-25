@@ -485,18 +485,17 @@ form button:hover {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
   padding-top: 50px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(20, 20, 20, 0.637);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.637);
 }
 
 .big-image {
   display: block;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
-  border: rgba(255, 255, 255, 0.205) solid;
+  border: rgba(224, 224, 224, 0.61) solid;
   margin: auto;
 }
 
