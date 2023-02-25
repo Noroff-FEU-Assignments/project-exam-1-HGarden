@@ -1,4 +1,5 @@
 const containerBlog = document.querySelector(".container-blog");
+const PopoutContainer = document.querySelector(".popout-container");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -19,7 +20,7 @@ async function getPosts(url) {
   </div>
 
   <div class="container-img">
-  <img src=${post._embedded["wp:featuredmedia"]["0"].source_url}>
+  <img class="main-image" src=${post._embedded["wp:featuredmedia"]["0"].source_url}>
   </div>
 
   <div class="container-info">
@@ -38,8 +39,22 @@ async function getPosts(url) {
   <p>${post.content.rendered}</p>
 </div>`;
 
-  const postTags = post.tags;
-  return postTags;
+  PopoutContainer.innerHTML += `<div class="popout-img">
+<img class="big-image" src=${post._embedded["wp:featuredmedia"]["0"].source_url}>
+</div>`;
+
+  const mainImage = document.querySelector(".main-image");
+  const bigImage = document.querySelector(".big-image");
+
+  mainImage.onclick = function () {
+    PopoutContainer.style.display = "block";
+    bigImage.src = this.src;
+  };
+
+  PopoutContainer.onclick = function () {
+    PopoutContainer.style.display = "none";
+    bigImage.src = this.src;
+  };
 }
 
 getPosts(APIurl);
