@@ -15,7 +15,7 @@ I was tasked with creating the following pages:
 -	Blog post specific pages
 -	Contact page.
 
-The contact page has javascript validation and the blogposts all link dynamically. The blog list page has a show more button. 
+The contact page has javascript validation and the blogposts all link dynamically. The blog list page has a show more button. The Album elements and the about page is gathered from wordpress and can be easily changed in wordpress to dynamically change or add content
 
 
 ## Built With
